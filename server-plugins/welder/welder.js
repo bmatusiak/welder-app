@@ -47,8 +47,8 @@ module.exports = function(options, imports, register) {
     
     function beforeListen(callback){
         _StaticFiles();
-        _RequestParsers();
         _Middlewares();
+        _RequestParsers();
         
         callback();
     }
