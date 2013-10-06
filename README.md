@@ -10,7 +10,7 @@ Startup Process
 
 1.  Static Files
 2.  Middlewares
-3.  Request Parsers
+3.  Request Parsers 
 
 Welder Functions
 ----
