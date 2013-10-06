@@ -1,6 +1,6 @@
 {
-    "name": "pointofsale",
-    "version": "0.0.1",
+    "name": "welder-app",
+    "version": "1.0.0",
     "dependencies": {
         "express": "*",
         "architect": "*",

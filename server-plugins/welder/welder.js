@@ -44,19 +44,12 @@ module.exports = function(options, imports, register) {
         console.log("_Middlewares done");
     }
     
-    var onListenRoutes;
-    var indexRoutes = [];
-    var pluginsInit = [];
-    
     function beforeListen(callback){
         _StaticFiles();
         _RequestParsers();
         _Middlewares();
         
-        
-        onListenRoutes(indexRoutes,pluginsInit,function(){
-            callback(pluginsInit);
-        });
+        callback();
     }
     
     welder = {
@@ -64,7 +57,7 @@ module.exports = function(options, imports, register) {
             this.listen(callback);
         },
         listen:function(callback){
-            beforeListen(function(someData){
+            beforeListen(function(){
                 try{
                     http.listen();
                     callback();
@@ -88,13 +81,6 @@ module.exports = function(options, imports, register) {
         },
     };
     
-    require("./lib/routes.js")(options,imports,welder,function(router){
-        welder.addRoute = router.addRoute;
-        welder.routeCheck = router.routeCheck;
-        onListenRoutes = router.listen;
-        
-        welder.jquery = router.jquery;
-            
-        register(null,{"welder": welder});
-    });
+    register(null,{"welder": welder});
+    
 };

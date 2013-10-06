@@ -3,7 +3,7 @@
 module.exports = function(options, imports, register) {
     var mongoose = require('mongoose');
     
-    var mongoHost = process.env.MONGOLAB_URI || options.HOST || "mongodb://localhost:27017/test";
+    var mongoHost = process.env.MONGOLAB_URI || options.HOST || "mongodb://localhost:27017/welder";
     mongoose.connect(mongoHost);
     
     var db = mongoose.connection;
