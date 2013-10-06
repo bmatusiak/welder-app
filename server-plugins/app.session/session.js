@@ -1,7 +1,7 @@
 module.exports = function(options,imports,register){
     var MongooseSession = imports["db-mongoose-session"];
     
-    imports.welder.addRequestParser(function(http){
+    imports.welder.addMiddleWare(function(http){
          http.app.use(http.express.session(
             {
                 key: options.key || "session.key",   
