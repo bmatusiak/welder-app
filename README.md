@@ -1,7 +1,11 @@
 welder-app
 ==========
 
-welder-app is a basic template based off the architect structure
+welder-app is a basic template based off the [architect](https://github.com/c9/architect) and [express](https://github.com/visionmedia/express)
+
+
+
+
 
 ----
 
@@ -52,11 +56,11 @@ Example Plugins
 ----
 
 
-__app.main__ : Shows how to add a RequestParser and Architect plugin
+__app.main__ : Shows how to add a RequestParser and architect plugin
 
-__app.session__ : Shows how to add a Middleware and Architect plugin with plugin dependency
+__app.session__ : Shows how to add a Middleware and architect plugin with plugin dependency
 
-__db.mongoose__ : Shows how to add a General Architect plugin
+__db.mongoose__ : Shows how to add a General architect plugin
 
 
 
