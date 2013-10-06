@@ -54,6 +54,7 @@ module.exports = function(options, imports, register) {
     }
     
     welder = {
+        http:http,
         start:function(callback){
             this.listen(callback);
         },
