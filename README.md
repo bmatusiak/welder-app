@@ -46,14 +46,19 @@ How _pre-setup express_ is configured
 
 Express is setup to compress all output.
 
-__bodyParser__ and __cookieParser__ are loaded before RequestParsers
+__bodyParser__ and __cookieParser__ are loaded before middlewares
 
-so the middleware are **not** aware of bodyParser or cookieParser.
-
-Built-in Mongdb support with mongoose
+Example Plugins
 ----
 
-Mongoose is builtin with welder
+
+__app.main__ : 
+
+__app.session__ : Shows how to add 
+
+__db.mongoose__ : 
+
+
 
 
 Version interp

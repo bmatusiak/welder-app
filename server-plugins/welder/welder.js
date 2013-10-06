@@ -27,10 +27,6 @@ module.exports = function(options, imports, register) {
     
     var __RequestParsers = [];
     function _RequestParsers(){
-        //every thing under there gets cookies and session data
-        http.app.use(http.express.bodyParser());
-        http.app.use(http.express.cookieParser(options.clientSecret));
-        
         for (var i in __RequestParsers) {
             __RequestParsers[i](http);
         } 
@@ -39,6 +35,9 @@ module.exports = function(options, imports, register) {
     
     var __Middlewares = [];
     function _Middlewares(){
+        http.app.use(http.express.bodyParser());
+        http.app.use(http.express.cookieParser(options.clientSecret));
+        
         for(var i in __Middlewares){
             __Middlewares[i](http);
         }
