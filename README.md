@@ -52,11 +52,11 @@ Example Plugins
 ----
 
 
-__app.main__ : 
+__app.main__ : Shows how to add a RequestParser and Architect plugin
 
-__app.session__ : Shows how to add 
+__app.session__ : Shows how to add a Middleware and Architect plugin with plugin dependency
 
-__db.mongoose__ : 
+__db.mongoose__ : Shows how to add a General Architect plugin
 
 
 
