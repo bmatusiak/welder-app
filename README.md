@@ -12,6 +12,34 @@ Startup Process
 2.  Request Parsers
 3.  Middlewares
 
+Welder Functions
+----
+
+__addStatic(mount,dir,listDirAlso)__
+
+*   _mount_ : is the Web Directory
+*   _dir_ : is the Server Directory
+*   _listDirAlso_ : is to provide directory listings
+
+__addMiddleWare:function(fn)__
+
+*   _fn(http)_ : provides the http object
+
+__addRequestParser:function(fn)__
+
+*   _fn(http)_ : provides the http object
+
+Welder Objects
+----
+
+__http__
+
+the http object is a pre-setup express objects
+
+*   _app_ : provides direct access to the express app
+*   _server_ : provides direct access to the http server
+*   _express_ : provides direct access to the express object
+*   _listen_ : used by welder internaly _function(port,ip,callback)_ but can be used to listen on another port
 
 Built-in Mongdb support with mongoose
 ----
@@ -29,12 +57,12 @@ and X if the welder version so you can always know what version of welder you ha
 
 and Y is release version
 
-and Z is sub-release version
+and Z is sub-release version 
 
 ```json
 {
     "name": "welder-app",
-    "version": "1.0.0",
+    "version": "1.1.32",
     "dependencies": {
         "express": "*",
         "architect": "*",

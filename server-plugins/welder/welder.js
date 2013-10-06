@@ -16,6 +16,7 @@ module.exports = function(options, imports, register) {
             addStaticMount(mount, Path,true);
         } 
     }
+    
     function addStaticMount(mount, dir, listDirAlso){
         if(options.listDirectories || listDirAlso)
             http.app.use(mount, http.express.directory(dir));
