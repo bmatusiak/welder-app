@@ -41,6 +41,15 @@ the http object is a pre-setup express objects
 *   _express_ : provides direct access to the express object
 *   _listen_ : used by welder internaly _function(port,ip,callback)_ but can be used to listen on another port
 
+How _pre-setup express_ is configured
+----
+
+Express is setup to compress all output.
+
+__bodyParser__ and __cookieParser__ are loaded before RequestParsers
+
+so the middleware are **not** aware of bodyParser or cookieParser.
+
 Built-in Mongdb support with mongoose
 ----
 
